@@ -1,0 +1,68 @@
+.todo-app {
+  font-family: sans-serif;
+  margin-left: 3rem;
+  margin-top: 3rem;
+}
+
+button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.search-todos {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.todo-list {
+  margin-top: 1rem;
+  text-align: left;
+  list-style: none;
+}
+
+.todo-item-completed input,
+.todo-item-completed textarea {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+input,textarea {
+  border: none;
+  border-color: Transparent; 
+  overflow: auto;
+  background-color: transparent;
+}
+
+.status-filters {
+  display:inline;
+  margin-right: 5rem;
+}
+
+.filter {
+  padding: 0.3rem 0;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+.filter-active {
+  color: transparent;
+ text-shadow: 0 0 0 #af8d1c;
+  border-bottom: 1px solid black;
+}
+
+table {
+  margin-top: 1rem;
+}
+
+table td {
+  vertical-align: top;
+}
+
+textarea {
+  resize: none; 
+}
+
+.input-todo {
+  display: inline;
+}
