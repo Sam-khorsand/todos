@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addTodo, modifyTodo, deleteTodo, toggleTodo } from "../redux/actions";
-import cx from "classnames";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -35,7 +34,7 @@ class AddModTodo extends React.Component {
   render() {
     return (
       <div
-        className={cx("input-todo", this.props.todo && "input-todo-modify")}
+        className="input-todo"
         onSubmit={this.handleAddModTodo}
       >
       <table>
@@ -50,11 +49,8 @@ class AddModTodo extends React.Component {
                   this.handleChange({ key: "title", value: e.target.value })
                 }
                 onKeyPress={(e) => {
-                  if (this.props.todo && e.key === "Enter") {
-                    var value = e.target.value;
-                    e.preventDefault();
-                    this.handleAddModTodo({ key: "title", value: value });
-                  }
+                  if (this.props.todo)
+                    this.handleAddModTodo({ key: "title", value: e.target.value });
                 }}
                 value={this.state.title}
               />
@@ -70,11 +66,8 @@ class AddModTodo extends React.Component {
                   this.handleChange({ key: "description", value: e.target.value })
                 }
                 onKeyPress={(e) => {
-                  if (this.props.todo && e.key === "Enter") {
-                    var value = e.target.value;
-                    e.preventDefault();
-                    this.handleAddModTodo({ key: "title", value: value });
-                  }
+                  if (this.props.todo)
+                    this.handleAddModTodo({ key: "description", value: e.target.value });
                 }}
               />
             </td>
